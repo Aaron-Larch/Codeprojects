@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p>Thank you <span th:text="${name}"></span> for shopping
+	at our <b>fantastic</b> grocery store!</p>
+
+  	<p>Today is: <span th:text="${today}">13 February 2011</span></p>
+  	<div id="Sheet">
+  	<div style="overflow: hidden;">
+	<p style="float: left;">User:
+	<span style="padding-left: 310px;" th:text="${name}"></span><br/>
+	Order ID Number:
+	<span style="padding-left: 222px;" th:text="${OrderID}"></span><br/>
+	</p>
+	</div>
+	------------------------------------------------------------------------------
+	<div style="overflow: hidden;">
+	<p style="float: left;">Product:
+	<span style="padding-left: 310px;" th:text="${product}"></span><br/> 
+	Supplyer:
+	<span style="padding-left: 300px;" th:text="${Compony}"></span><br/>
+	Price per unit:
+	<span style="padding-left: 270px;" th:text="${itemp}"></span><br/>
+	Ammount Purchased:
+	<span style="padding-left: 220px;" th:text="${ammount}"></span><br/>
+	Coupons Applied:
+	<span style="padding-left: 242px;" th:text="${discount}"></span><br/>
+	</p>
+	</div>
+	------------------------------------------------------------------------------
+	<div style="overflow: hidden;">
+	<p style="float: left;">Total Price:</p>
+	<p style="padding-left: 350px;" th:text="${price} + '!'"/>
+	</div>
+	</div>
+	 <p th:text="'We expect your package to arrive on ' + ${Dilivery} + '!'" />
+</body>
+</html>
